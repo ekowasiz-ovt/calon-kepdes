@@ -1,0 +1,33 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Validasi STEP 1",
+			"type": "shell",
+			"command": "npm install; npm run build",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Karanganyar Digital Dev Server",
+			"type": "shell",
+			"command": "npm run dev -- --host 0.0.0.0",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Probe halaman lokal",
+			"type": "shell",
+			"command": "curl.exe -I http://127.0.0.1:5173/",
+			"problemMatcher": []
+		},
+		{
+			"label": "Cek jumlah tabel STEP 2",
+			"type": "shell",
+			"command": "(Select-String -Path supabase/migrations/0001_schema.sql -Pattern '^create table public\\.').Count",
+			"problemMatcher": []
+		}
+	]
+}

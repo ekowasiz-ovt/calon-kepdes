@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.local
+*.tsbuildinfo
+
+# Berkas audit/sementara di akar repo (screenshot, backup aset)
+.tmp-*
+
+# Supabase CLI (link state, cache)
+supabase/.temp/
+supabase/.branches/
